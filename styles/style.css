@@ -41,8 +41,8 @@
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
   outline: 1px solid currentColor;
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
@@ -311,7 +311,7 @@ section h3 {
   }
 
   .section_number_three .title-decor_thin {
-  margin-top: 0px;
+    margin-top: 0px;
   }
 
   .section_number_three .title-decor {
@@ -366,23 +366,22 @@ section h3 {
 }
 
 @media (min-width: 1024px) {
-
   .header {
     min-block-size: 728px;
     max-block-size: 100vh;
   }
 
   .header__theme-menu-list {
-    align-items: start;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
+    align-items: start;
     margin-top: 0;
   }
 
   .header_description {
+    margin-top: 114px;
     max-inline-size: 491px;
     max-block-size: 70px;
-    margin-top: 114px;
   }
 
   .section_number_one {
@@ -420,6 +419,3 @@ section h3 {
     max-block-size: 100vh;
   }
 }
-
-
-
