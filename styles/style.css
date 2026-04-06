@@ -7,15 +7,16 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  margin: 0 auto;
 }
 
 .header {
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin: 10px;
+  padding: 10px;
   min-block-size: 648px;
-  max-block-size: 100vh;
+  block-size: 100vh;
 }
 
 /* Переключатели */
@@ -23,8 +24,8 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 12px;
-  margin-top: 62px;
+  gap: 11.5px;
+  margin-top: 64px;
 }
 
 .header__theme-menu-button {
@@ -66,7 +67,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
   color: var(--element-color);
   font-family: var(--font);
   font-weight: 400;
@@ -96,6 +98,7 @@
   border-right: 1px solid var(--element-color);
   inline-size: 25px;
   block-size: 25px;
+  margin: 10px;
 }
 
 .frame::after {
@@ -107,6 +110,8 @@
   border-left: 1px solid var(--element-color);
   inline-size: 25px;
   block-size: 25px;
+  margin: 10px;
+
 }
 
 /* no focus */
@@ -154,7 +159,7 @@ main {
   grid-template-columns: 1fr;
   gap: 30px;
   margin: 10px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 section h3 {
@@ -220,9 +225,10 @@ section h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 48px 10px 10px;
+  margin-top: 40px;
+  padding: 10px;
   min-block-size: 648px;
-  max-block-size: 100vh;
+  block-size: 100vh;
 }
 
 .footer_title {
@@ -235,13 +241,20 @@ section h3 {
 
 @media (min-width: 768px) {
   .header {
-    margin: 20px;
-    min-block-size: 985px;
-    max-block-size: 100vh;
+    padding: 20px;
+    min-block-size: 768px;
   }
 
   .decoration_with-dot {
-    margin-top: 0;
+    margin: 10px;
+  }
+
+  .frame::after {
+    margin: 20px;
+  }
+
+  .frame::before {
+    margin: 20px;
   }
 
   .header__theme-menu-list {
@@ -262,7 +275,7 @@ section h3 {
 
   main {
     gap: 60px;
-    margin-top: 78px;
+    margin-top: 60px;
     margin-right: 20px;
     margin-left: 20px;
   }
@@ -355,7 +368,8 @@ section h3 {
   }
 
   .footer {
-    margin: 80px 20px 10px;
+    margin-top: 60px;
+    padding: 20px;
     min-block-size: 984px;
     max-block-size: 100vh;
   }
@@ -367,8 +381,7 @@ section h3 {
 
 @media (min-width: 1024px) {
   .header {
-    min-block-size: 728px;
-    max-block-size: 100vh;
+    min-block-size: 768px;
   }
 
   .header__theme-menu-list {
@@ -415,7 +428,6 @@ section h3 {
   }
 
   .footer {
-    min-block-size: 728px;
-    max-block-size: 100vh;
+    min-block-size: 768px;
   }
 }
