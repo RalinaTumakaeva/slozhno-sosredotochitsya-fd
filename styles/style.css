@@ -354,7 +354,6 @@ h4 {
   }
 
   .section_attention {
-    grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr;
   }
 
