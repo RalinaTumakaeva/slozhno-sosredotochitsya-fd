@@ -1,13 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  margin: 0 auto;
   background-color: var(--bg-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0 auto;
 }
 
 .header {
@@ -33,7 +33,7 @@
   height: 25px;
   border: transparent;
   color: var(--element-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-align: center;
@@ -69,7 +69,7 @@
   align-items: center;
   gap: 10px;
   color: var(--element-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -114,7 +114,7 @@
 .header_title {
   justify-self: start;
   color: var(--title-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 83%;
@@ -132,7 +132,7 @@
 /* Декор заголовка */
 .title-decor {
   color: var(--main_text-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -152,19 +152,16 @@
   margin-top: 40px;
 }
 
-.section h3, h4 {
+.section h3,
+h4 {
   margin-bottom: 10px;
 }
-
-.section_advice h3 {
-    margin-bottom: 20px;
-  }
 
 /* Оформление заголовка в секциях */
 .section_title {
   margin-bottom: 20px;
   color: var(--element-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -172,12 +169,12 @@
 
 /* Оформление абзацов в секциях */
 .section_text {
+  margin-bottom: 20px;
   color: var(--text-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  margin-bottom: 20px;
 }
 
 /* Оформление ссылки */
@@ -197,6 +194,10 @@
 .link_effect:focus-visible {
   outline: 1px solid currentColor;
   outline-offset: 0px;
+}
+
+.section_advice_wrapper h3 {
+  margin-bottom: 20px;
 }
 
 .section_gallery {
@@ -226,7 +227,7 @@
 
 .footer_title {
   color: var(--title-color);
-  font-family: var(--font, sans-serif);
+  font-family: var(--font), sans-serif;
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 83%;
@@ -244,13 +245,13 @@
   }
 
   .frame::after {
-    left: 20px;
     bottom: 20px;
+    left: 20px;
   }
 
   .frame::before {
-    right: 20px;
     top: 20px;
+    right: 20px;
   }
 
   .header__theme-menu-list {
@@ -277,14 +278,11 @@
   .section {
     display: grid;
     gap: 20px;
+    grid-template-columns: 236px 1fr; 
   }
 
   .section:nth-child(2) {
     gap: 0;
-  }
-
-  .section_concentrate {
-    grid-template-columns: 236px 1fr;
   }
 
   .section_attention {
@@ -293,10 +291,6 @@
 
   .section_attention .section_title {
     max-inline-size: 236px;
-  }
-
-  .section_advice {
-    grid-template-columns: 236px 1fr;
   }
 
   .section_gallery {
@@ -355,29 +349,27 @@
     max-inline-size: 491px;
   }
 
-  .section_concentrate {
+  .section {
     grid-template-columns: 315px 1fr;
   }
 
   .section_attention {
     grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
   }
 
   .section_attention_wrapper {
-    display: flex;
-    gap: 20px
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
-  .section_attention article {
-    max-inline-size: 315px;
-  }
-  
   .section_attention .section_title {
     max-inline-size: 315px;
   }
 
-  .section_advice {
-    grid-template-columns: 315px 1fr;
+  .section_gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .footer {
